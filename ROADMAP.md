@@ -21,3 +21,10 @@ Flujo: scraper (ya existe) → analizar formato de cada outlier → generar idea
 - Datos: cada afirmación lleva su fuente (Supercell oficial, notas de parche, API oficial). Si no hay fuente, el dato no entra.
 - Voz: se aprende de los transcripts de tus mejores videos, con una lista de frases prohibidas que suenan a anuncio.
 - Pendiente de Pol: acceso a las carpetas, 3-5 transcripts buenos + 2 malos, la conversación buena con Claude si se puede recuperar.
+
+## 3 · Coreano: plan
+Pol lee hangul. Objetivo: conversar en Corea y leer artículos y redes. iPhone, gratis, 15 min a la mañana y 15 a la noche.
+- Mañana: 10 min de tarjetas de repaso + 5 min de audio (lección TTMIK o repetir en voz alta).
+- Noche: Lun/Mié/Vie, conversación por voz con Claude simulando situaciones de viaje. Mar/Jue, lectura graduada. Sáb, repaso con un video en coreano.
+- Fases: 1) supervivencia (meses 1-2) → 2) conversación básica (meses 3-4) → 3) lectura real (mes 5 en adelante).
+- Propuesta: app web propia con "un botón por sesión" (tarjetas + audio + lectura del día).
