@@ -37,14 +37,22 @@ Pol lee hangul. Objetivo: conversar en Corea y leer artículos y redes. iPhone, 
 ## 2 · Bombazo: distribución
 Datos: bombazo.app / bombazo.com.ar · 4 juegos diarios a las 00:00 · Cloudflare + Supabase · X: 132 seguidores y 800 seguidos.
 - A. ✅ Ya hay botón de compartir.
-- B. Automatizar los 4 posts diarios de X (hoy manuales) con un Cloudflare Worker con cron + API de X + imagen de cada juego.
-- C. Buscador con Grok: el objetivo pasa a ser **streamers** (Twitch, Kick, YouTube) que puedan jugarlo en vivo. Código + mensaje redactado; el envío lo hace Pol.
-- D. El login no convierte, ni con Bombazo+ de regalo → pedir solo el mail (un campo) o activar notificaciones push. Medir en qué paso abandonan.
+- B. Automatizar los 4 posts diarios de X con los **mp4** que ya genera el workflow de Pol: guardarlos en R2 + Worker con cron que los sube a la API de X.
+- C. Buscador con Grok: **streamers + tuiteros** de fútbol, partiendo de la red que Pol ya tiene. Código + mensaje redactado; el envío lo hace Pol.
+- D. Login con Google y mail (con confirmación); no convierte ni con Bombazo+ de regalo. Primero medir: ¿el 78% vuelve o juega una sola vez? Si vuelve: pedir el login cuando la racha llegue a 3 o más días ("no pierdas tu racha"). Si no vuelve: el problema es la retención, no el login.
 - E. ❌ Descartado: los shorts deberían salir de streamers jugando (se cubre con C).
 - Crecimiento en X: dejar de seguir para que te sigan; responder a cuentas grandes de fútbol.
 
 ## 6 · Ingreso pasivo: canal faceless de fútbol en Blender
 - Referencia: @ifologyfilms.
-- Formato recomendado: tácticas en una pizarra 3D (fichas sobre la cancha) → la parte más automatizable.
-- Pipeline: investigación y guion (Claude) → posiciones en JSON → Blender por script (bpy) → voz IA → edición → Pol revisa y publica.
+- En español. Pol sabe Blender. Estilo **SUPERHOT**: maniquíes blancos low-poly, rojo para resaltar, cancha minimalista.
+- Pol arma la escena base una vez (cancha, maniquí con rig, materiales, luces y cámaras). Claude genera el resto por script.
+- Pipeline: guion (Claude) → posiciones + acciones en JSON → bpy mueve los maniquíes con animaciones de Mixamo (correr, patear, festejar) → render en Eevee → voz de Pol clonada en ElevenLabs → Pol revisa y publica.
+- Costo: unos 22 USD por mes (ElevenLabs Creator). Ritmo inicial: 1 video largo + 3-5 shorts por semana.
 - Riesgos: política de YouTube contra contenido "repetitivo/masivo" y derechos de autor (no usar imágenes de partidos ni escudos).
+
+## 4 · Grok para la tía
+Administradora en una concesionaria: carga datos de facturas a los sistemas de la empresa y usa OneDrive.
+- Flujo: facturas en una carpeta de OneDrive → Grok con un prompt guardado → tabla con las columnas exactas del sistema → importar o pegar.
+- Las facturas electrónicas argentinas (ARCA) traen un QR con los datos (CUIT, fecha, importe).
+- Revisar la política de la empresa sobre subir facturas a una IA.
