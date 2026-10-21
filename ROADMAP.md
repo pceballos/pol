@@ -46,13 +46,18 @@ Datos: bombazo.app / bombazo.com.ar · 4 juegos diarios a las 00:00 · Cloudflar
 ## 6 · Ingreso pasivo: canal faceless de fútbol en Blender
 - Referencia: @ifologyfilms.
 - En español. Pol sabe Blender. Estilo **SUPERHOT**: maniquíes blancos low-poly, rojo para resaltar, cancha minimalista.
-- Pol arma la escena base una vez (cancha, maniquí con rig, materiales, luces y cámaras). Claude genera el resto por script.
+- La escena base la arma Claude Code por script (o en vivo con Blender MCP), a partir del video de referencia (se extraen frames con ffmpeg). Pol solo baja los maniquíes de Mixamo (Y Bot) y aprueba el resultado.
 - Pipeline: guion (Claude) → posiciones + acciones en JSON → bpy mueve los maniquíes con animaciones de Mixamo (correr, patear, festejar) → render en Eevee → voz de Pol clonada en ElevenLabs → Pol revisa y publica.
 - Costo: unos 22 USD por mes (ElevenLabs Creator). Ritmo inicial: 1 video largo + 3-5 shorts por semana.
 - Riesgos: política de YouTube contra contenido "repetitivo/masivo" y derechos de autor (no usar imágenes de partidos ni escudos).
 
-## 4 · Grok para la tía
+## 4 · Grok para la tía (⏸ Pol le pregunta: sistema, formato de las facturas, volumen, reglas de la empresa)
 Administradora en una concesionaria: carga datos de facturas a los sistemas de la empresa y usa OneDrive.
 - Flujo: facturas en una carpeta de OneDrive → Grok con un prompt guardado → tabla con las columnas exactas del sistema → importar o pegar.
 - Las facturas electrónicas argentinas (ARCA) traen un QR con los datos (CUIT, fecha, importe).
 - Revisar la política de la empresa sobre subir facturas a una IA.
+
+## 5 · Juego nuevo
+Referencias: Balatro, Megabonk, Suika, Palworld, Hollow Knight.
+Patrón común: un solo verbo simple, sinergias del tipo "una partida más", mucho feedback satisfactorio en cada acción, identidad visual fuerte, premisa que se explica en una línea.
+Conceptos propuestos: Penal Roguelike, Suika de figuritas, Potrero Survivors, Bola Rara, Pal-Club. Pendiente: elección de Pol + plataforma.
