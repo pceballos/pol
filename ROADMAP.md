@@ -13,3 +13,11 @@ Estado: ⬜ pendiente · 🟡 en curso · ✅ hecho
 
 ## Notas
 - X: el bot *encuentra* cuentas y redacta mensajes; los DMs los enviás vos (los DMs automáticos violan las reglas de X y arriesgan la cuenta).
+
+## 1 · Fábrica de ideas: diseño
+Flujo: scraper (ya existe) → analizar formato de cada outlier → generar ideas "purple cow" → verificar datos → guion con tu voz.
+- Las reglas se guardan en una skill de Claude en este repo: cada corrección queda guardada y no hay que repetirla.
+- Prueba "purple cow": ¿el espectador ya vio esto en Brawl/Clash? Si la respuesta es sí, se descarta.
+- Datos: cada afirmación lleva su fuente (Supercell oficial, notas de parche, API oficial). Si no hay fuente, el dato no entra.
+- Voz: se aprende de los transcripts de tus mejores videos, con una lista de frases prohibidas que suenan a anuncio.
+- Pendiente de Pol: acceso a las carpetas, 3-5 transcripts buenos + 2 malos, la conversación buena con Claude si se puede recuperar.
