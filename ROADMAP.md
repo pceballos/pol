@@ -60,4 +60,7 @@ Administradora en una concesionaria: carga datos de facturas a los sistemas de l
 ## 5 · Juego nuevo
 Referencias: Balatro, Megabonk, Suika, Palworld, Hollow Knight.
 Patrón común: un solo verbo simple, sinergias del tipo "una partida más", mucho feedback satisfactorio en cada acción, identidad visual fuerte, premisa que se explica en una línea.
-Conceptos propuestos: Penal Roguelike, Suika de figuritas, Potrero Survivors, Bola Rara, Pal-Club. Pendiente: elección de Pol + plataforma.
+Sin fútbol. Temática: mitología griega + nórdica mezclada, con nombres inventados.
+Mundo: Ymbrós. Dioses: Kraeva (trueno), Odryx (padre tuerto), Fenrhos (lobo-titán), Morvane (mar), Skaldra (nornas), Nyxheim (inframundo).
+Estilo visual: ánfora griega de figuras negras sobre terracota + talla de runas nórdicas.
+Conceptos: Runas del Oráculo, El Barquero, Urna de Dioses, Último Einherjar, Hilo de las Nornas. Pendiente: elección de Pol + plataforma.
