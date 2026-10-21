@@ -64,3 +64,17 @@ Sin fútbol. Temática: mitología griega + nórdica mezclada, con nombres inven
 Mundo: Ymbrós. Dioses: Kraeva (trueno), Odryx (padre tuerto), Fenrhos (lobo-titán), Morvane (mar), Skaldra (nornas), Nyxheim (inframundo).
 Estilo visual: ánfora griega de figuras negras sobre terracota + talla de runas nórdicas.
 Conceptos: Runas del Oráculo, El Barquero, Urna de Dioses, Último Einherjar, Hilo de las Nornas. Pendiente: elección de Pol + plataforma.
+
+### Runas del Oráculo: reglas
+- Bolsa de 20 runas (símbolo de un dios + valor del 1 al 5). Mano de 6. Hasta 3 tiradas por ronda.
+- Una tirada: elegís runas y las arrojás (arrastrar y soltar; la fuerza importa). Caen con física sobre una manta con zonas.
+- Profecías según cómo caen: par que se toca, cadena de 3, todas en el centro, dispersión… Puntaje = suma de valores × multiplicador.
+- Meta de puntos por ronda; cada 3 rondas un Presagio jefe (la manta se inclina, una ola mueve las piedras).
+- Tienda: dioses-comodín (máx. 5), runas especiales (pesada, que rebota, que se divide), mantas nuevas.
+
+### El Barquero: reglas
+- Cada noche: barca de 6 asientos, 8 almas en el muelle. Elegís quién sube y dónde se sienta. Límite de peso (si se pasa, se hunde).
+- Las almas tienen óbolo + habilidad que depende de vecinos y posición (Guerrero protege a los de al lado, Gemelos juntos, Traidor sin vigilar empuja a alguien).
+- Río con eventos visibles y bifurcaciones (riesgo/recompensa). Mejoras de la barca. Favor con dioses → pactos. Cada 3 noches, Fenrhos persigue: hay que arrojar almas.
+- Referencias: Luck be a Landlord, Backpack Hero, Slay the Spire (mapa).
+- Próximo paso: prototipos jugables y feos de los dos (navegador) para decidir jugando.
