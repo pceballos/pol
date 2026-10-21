@@ -35,9 +35,16 @@ Pol lee hangul. Objetivo: conversar en Corea y leer artículos y redes. iPhone, 
   - Racha diaria y progreso por fase.
 
 ## 2 · Bombazo: distribución
-Datos: bombazo.app / bombazo.com.ar · 4 juegos diarios · cambian a las 00:00 · solo tiene X · 78% juega sin loguearse.
-- A. Botón de compartir estilo Wordle (resultado con emojis + link). Es la palanca más barata.
-- B. Post automático en X a las 00:05 con un adelanto del desafío (GitHub Actions + API de X).
-- C. Buscador de cuentas con Grok (busca nativamente en X): 10 candidatos por día + mensaje redactado + código. El envío lo hace Pol.
-- D. Mails: dar un incentivo para loguearse (cosmético de regalo, guardar la racha) + mail diario o semanal (Brevo o Resend, plan gratis).
-- E. Shorts de trivia hechos con la fábrica de ideas, con el link al juego.
+Datos: bombazo.app / bombazo.com.ar · 4 juegos diarios a las 00:00 · Cloudflare + Supabase · X: 132 seguidores y 800 seguidos.
+- A. ✅ Ya hay botón de compartir.
+- B. Automatizar los 4 posts diarios de X (hoy manuales) con un Cloudflare Worker con cron + API de X + imagen de cada juego.
+- C. Buscador con Grok: el objetivo pasa a ser **streamers** (Twitch, Kick, YouTube) que puedan jugarlo en vivo. Código + mensaje redactado; el envío lo hace Pol.
+- D. El login no convierte, ni con Bombazo+ de regalo → pedir solo el mail (un campo) o activar notificaciones push. Medir en qué paso abandonan.
+- E. ❌ Descartado: los shorts deberían salir de streamers jugando (se cubre con C).
+- Crecimiento en X: dejar de seguir para que te sigan; responder a cuentas grandes de fútbol.
+
+## 6 · Ingreso pasivo: canal faceless de fútbol en Blender
+- Referencia: @ifologyfilms.
+- Formato recomendado: tácticas en una pizarra 3D (fichas sobre la cancha) → la parte más automatizable.
+- Pipeline: investigación y guion (Claude) → posiciones en JSON → Blender por script (bpy) → voz IA → edición → Pol revisa y publica.
+- Riesgos: política de YouTube contra contenido "repetitivo/masivo" y derechos de autor (no usar imágenes de partidos ni escudos).
