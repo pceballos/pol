@@ -27,4 +27,17 @@ Pol lee hangul. Objetivo: conversar en Corea y leer artículos y redes. iPhone, 
 - Mañana: 10 min de tarjetas de repaso + 5 min de audio (lección TTMIK o repetir en voz alta).
 - Noche: Lun/Mié/Vie, conversación por voz con Claude simulando situaciones de viaje. Mar/Jue, lectura graduada. Sáb, repaso con un video en coreano.
 - Fases: 1) supervivencia (meses 1-2) → 2) conversación básica (meses 3-4) → 3) lectura real (mes 5 en adelante).
-- Propuesta: app web propia con "un botón por sesión" (tarjetas + audio + lectura del día).
+- Sin fecha de viaje: plan equilibrado entre conversación y lectura.
+- Se construye en Claude Code (en la PC de Pol), en un repo propio: app web instalable en el iPhone.
+  - Botón "Sesión de hoy" que según el día y la hora arma: tarjetas → audio → conversación o lectura.
+  - Tarjetas con repaso espaciado y audio con la voz coreana del iPhone.
+  - Lectura: textos a su nivel generados de antemano; las palabras nuevas se agregan solas al mazo.
+  - Racha diaria y progreso por fase.
+
+## 2 · Bombazo: distribución
+Datos: bombazo.app / bombazo.com.ar · 4 juegos diarios · cambian a las 00:00 · solo tiene X · 78% juega sin loguearse.
+- A. Botón de compartir estilo Wordle (resultado con emojis + link). Es la palanca más barata.
+- B. Post automático en X a las 00:05 con un adelanto del desafío (GitHub Actions + API de X).
+- C. Buscador de cuentas con Grok (busca nativamente en X): 10 candidatos por día + mensaje redactado + código. El envío lo hace Pol.
+- D. Mails: dar un incentivo para loguearse (cosmético de regalo, guardar la racha) + mail diario o semanal (Brevo o Resend, plan gratis).
+- E. Shorts de trivia hechos con la fábrica de ideas, con el link al juego.
