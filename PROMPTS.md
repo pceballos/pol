@@ -197,7 +197,8 @@ Mostrame un plan antes de cada fase.
 1. Google Cloud: crear un proyecto → activar *YouTube Data API v3* y *YouTube Analytics API* → autorizar los 2 canales (OAuth, una vez por canal).
 2. Supabase: copiar la URL del proyecto y la service key (va como secret, nunca en el código).
 3. Cloudflare: un API token con permiso de lectura de Analytics.
-4. Redes: [LISTA: TikTok / Instagram / X]. Instagram necesita cuenta Creator o Business vinculada a una página de Facebook.
+4. Meta (Instagram + Facebook, los 2 canales): una sola app en developers.facebook.com cubre las dos redes. Instagram tiene que ser cuenta Creator o Business vinculada a la página de Facebook.
+5. TikTok (los 2 canales): app en developers.tiktok.com (la aprobación puede tardar unos días). Mientras tanto, plan B: exportar las estadísticas desde TikTok Studio.
 
 Abrir Claude Code en una carpeta nueva `reporte-semanal/`.
 
@@ -209,7 +210,9 @@ FUENTES:
    - Por canal: suscriptores (+/-), vistas, horas de reproducción, ingresos estimados, RPM, CTR de impresiones, retención media.
    - Separar largos y shorts.
    - Top 3 y peores 3 videos de la semana, con una hipótesis de por qué rindieron así.
-2. Redes cortas: [TikTok / Instagram / X]. Si alguna API es muy cara o imposible, proponé una alternativa (exportar CSV, scraping permitido, etc.) y preguntame.
+2. Formato corto, 2 canales × 4 plataformas: YouTube Shorts, TikTok, Instagram Reels y Facebook Reels (Meta Graph API para IG + FB, TikTok API para TikTok). Si alguna API es muy cara o se traba, proponé una alternativa (exportar CSV desde TikTok Studio, etc.) y preguntame.
+   - Por plataforma: seguidores (+/-), vistas, interacción, compartidos, guardados.
+   - CLAVE, comparación cruzada: el mismo short se publica en las 4 plataformas. Emparejalo (por título, fecha o duración) y mostrá una tabla de en qué plataforma rindió mejor cada video y qué tipo de formato gana en cada una.
 3. Bombazo (Supabase + Cloudflare Web Analytics):
    - Visitas y de dónde vienen (X, directo, Google, otros).
    - Jugadores diarios y semanales, % que completa los 4 juegos, botón de compartir usado.
