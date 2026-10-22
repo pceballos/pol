@@ -188,3 +188,47 @@ Mostrame un plan antes de cada fase.
 - [ ] Preguntas a la tía
 - [ ] Pensar el juego (1 o 2)
 - [ ] Pendiente en este chat: ideas de ingreso pasivo (más allá del canal) y elegir concepto de juego
+
+---
+
+## 7 · Reporte semanal (YouTube + redes + Bombazo)
+
+**Tu parte antes (unos 20 min):** Claude Code te guía, pero vas a tener que hacer clic en:
+1. Google Cloud: crear un proyecto → activar *YouTube Data API v3* y *YouTube Analytics API* → autorizar los 2 canales (OAuth, una vez por canal).
+2. Supabase: copiar la URL del proyecto y la service key (va como secret, nunca en el código).
+3. Cloudflare: un API token con permiso de lectura de Analytics.
+4. Redes: [LISTA: TikTok / Instagram / X]. Instagram necesita cuenta Creator o Business vinculada a una página de Facebook.
+
+Abrir Claude Code en una carpeta nueva `reporte-semanal/`.
+
+```
+Armá un reporte semanal automático de todos mis proyectos. Me tiene que llegar todos los lunes a las 9 (hora Argentina) a [MAIL o "una página web privada"].
+
+FUENTES:
+1. YouTube, 2 canales: Brawlconpol y Clashconpol (YouTube Data API + YouTube Analytics API, OAuth por canal).
+   - Por canal: suscriptores (+/-), vistas, horas de reproducción, ingresos estimados, RPM, CTR de impresiones, retención media.
+   - Separar largos y shorts.
+   - Top 3 y peores 3 videos de la semana, con una hipótesis de por qué rindieron así.
+2. Redes cortas: [TikTok / Instagram / X]. Si alguna API es muy cara o imposible, proponé una alternativa (exportar CSV, scraping permitido, etc.) y preguntame.
+3. Bombazo (Supabase + Cloudflare Web Analytics):
+   - Visitas y de dónde vienen (X, directo, Google, otros).
+   - Jugadores diarios y semanales, % que completa los 4 juegos, botón de compartir usado.
+   - Retención: % que vuelve al día 1 y al día 7. Anónimos vs logueados.
+   - Logins nuevos, rachas activas, conversiones del aviso de racha.
+   - Bombazo+ y cosméticos: ventas e ingresos.
+   - Códigos de regalo canjeados (por código, para saber qué cuenta contactada trajo jugadores).
+   - Rendimiento de los posts automáticos en X (si la API lo permite sin costo extra; si no, avisame).
+   Leé el esquema de la base de Bombazo antes de proponer las consultas. Repo: [RUTA].
+
+FORMATO DEL REPORTE (1 página, se lee en 3 minutos):
+- Arriba: 5 números clave con flecha ↑↓ y % contra la semana anterior.
+- Una sección por proyecto con gráficos simples.
+- Al final: "3 acciones para esta semana", concretas y basadas en los datos.
+- Guardar el historial de cada semana (JSON) para comparar y ver tendencias.
+
+TÉCNICO:
+- Un script recolector + una tarea programada (GitHub Actions o Cloudflare Worker con cron, lo más gratis y simple).
+- Secrets en el gestor de secrets, nunca en el código.
+- Primero hacé una versión que corra a mano y me muestre el reporte. Cuando lo apruebe, la programamos.
+Mostrame un plan antes de construir.
+```
