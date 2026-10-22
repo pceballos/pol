@@ -203,7 +203,7 @@ Mostrame un plan antes de cada fase.
 Abrir Claude Code en una carpeta nueva `reporte-semanal/`.
 
 ```
-Armá un reporte semanal automático de todos mis proyectos. Me tiene que llegar todos los lunes a las 9 (hora Argentina) a [MAIL o "una página web privada"].
+Armá un reporte semanal automático de todos mis proyectos. Se actualiza todos los lunes a las 9 (hora Argentina) en un DASHBOARD web privado: Cloudflare Pages protegido con Cloudflare Access (login solo con mi mail; gratis).
 
 FUENTES:
 1. YouTube, 2 canales: Brawlconpol y Clashconpol (YouTube Data API + YouTube Analytics API, OAuth por canal).
@@ -218,20 +218,21 @@ FUENTES:
    - Jugadores diarios y semanales, % que completa los 4 juegos, botón de compartir usado.
    - Retención: % que vuelve al día 1 y al día 7. Anónimos vs logueados.
    - Logins nuevos, rachas activas, conversiones del aviso de racha.
-   - Bombazo+ y cosméticos: ventas e ingresos.
    - Códigos de regalo canjeados (por código, para saber qué cuenta contactada trajo jugadores).
    - Rendimiento de los posts automáticos en X (si la API lo permite sin costo extra; si no, avisame).
    Leé el esquema de la base de Bombazo antes de proponer las consultas. Repo: [RUTA].
 
-FORMATO DEL REPORTE (1 página, se lee en 3 minutos):
+FORMATO DEL DASHBOARD (lindo, se lee en 3 minutos):
+- Diseño cuidado: modo oscuro, tarjetas, gráficos interactivos (hover con el valor), que se vea bien en el celular.
 - Arriba: 5 números clave con flecha ↑↓ y % contra la semana anterior.
-- Una sección por proyecto con gráficos simples.
+- Pestañas: Resumen · Brawlconpol · Clashconpol · Formato corto (comparación cruzada) · Bombazo.
+- Selector de semana para ver semanas anteriores y gráficos de tendencia de las últimas 12 semanas.
 - Al final: "3 acciones para esta semana", concretas y basadas en los datos.
 - Guardar el historial de cada semana (JSON) para comparar y ver tendencias.
 
 TÉCNICO:
 - Un script recolector + una tarea programada (GitHub Actions o Cloudflare Worker con cron, lo más gratis y simple).
 - Secrets en el gestor de secrets, nunca en el código.
-- Primero hacé una versión que corra a mano y me muestre el reporte. Cuando lo apruebe, la programamos.
+- Primero hacé una versión que corra a mano y me muestre el dashboard con datos reales. Cuando lo apruebe, la programamos.
 Mostrame un plan antes de construir.
 ```
