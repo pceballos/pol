@@ -193,12 +193,37 @@ Mostrame un plan antes de cada fase.
 
 ## 7 · Reporte semanal (YouTube + redes + Bombazo)
 
-**Tu parte antes (unos 20 min):** Claude Code te guía, pero vas a tener que hacer clic en:
-1. Google Cloud: crear un proyecto → activar *YouTube Data API v3* y *YouTube Analytics API* → autorizar los 2 canales (OAuth, una vez por canal).
-2. Supabase: copiar la URL del proyecto y la service key (va como secret, nunca en el código).
-3. Cloudflare: un API token con permiso de lectura de Analytics.
-4. Meta (Instagram + Facebook, los 2 canales): una sola app en developers.facebook.com cubre las dos redes. Instagram tiene que ser cuenta Creator o Business vinculada a la página de Facebook.
-5. TikTok (los 2 canales): app en developers.tiktok.com (la aprobación puede tardar unos días). Mientras tanto, plan B: exportar las estadísticas desde TikTok Studio.
+**Tu parte antes (unos 35 min, una sola vez).** Creá la carpeta `reporte-semanal/` y adentro un archivo `.env`, donde vas pegando cada clave. Nunca lo compartas ni lo subas a GitHub.
+
+**A · YouTube (15 min)**
+1. Entrar a console.cloud.google.com con la cuenta de Google dueña de los canales → crear el proyecto `reporte-semanal`.
+2. *APIs y servicios → Biblioteca* → activar **YouTube Data API v3** y **YouTube Analytics API**.
+3. *Pantalla de consentimiento OAuth* (o *Google Auth Platform*): tipo **Externo**, nombre de la app y tu mail. Agregate como usuario de prueba.
+4. ⚠️ Pasar el estado de publicación a **"En producción"**. No hace falta verificarla; vas a ver un aviso de "app no verificada" y lo aceptás. Si queda en "Prueba", el permiso vence cada 7 días y el reporte se rompe.
+5. *Credenciales → Crear credenciales → ID de cliente OAuth → App de escritorio* → descargar el JSON → guardarlo como `reporte-semanal/client_secret.json`.
+6. Autorizar cada canal: lo hace Claude Code después (te abre el navegador y elegís Brawlconpol; después repetís con Clashconpol).
+
+**B · Supabase (2 min)**
+1. Proyecto de Bombazo → *Project Settings → API*.
+2. Copiar al `.env`: `SUPABASE_URL` y la **service_role key** (es secreta: tiene acceso total). Mejor todavía: pedile a Claude que cree un usuario de **solo lectura** y usá ese.
+
+**C · Cloudflare (3 min)**
+1. dash.cloudflare.com → verificar que **Web Analytics** esté activo en Bombazo.
+2. *Mi perfil → API Tokens → Create Token → Custom*: permiso **Account Analytics: Read** (+ **Zone Analytics: Read**) → copiar el token al `.env`.
+3. Copiar también el **Account ID** (aparece en la página principal de tu cuenta).
+4. El deploy del dashboard y Cloudflare Access los configura Claude Code después (`wrangler login`).
+
+**D · Instagram + Facebook (15 min; es la parte más molesta)**
+1. Cada Instagram tiene que ser cuenta **Creador o Empresa** y estar **vinculada a la página de Facebook** de ese canal (se hace desde el Centro de cuentas de Meta o desde la configuración de la página).
+2. developers.facebook.com → *Mis apps → Crear app*. El asistente cambia seguido; si te trabás, mandale una captura a Claude.
+3. Agregar el producto **Instagram (API con inicio de sesión con Facebook)**.
+4. *Herramientas → Explorador de la API Graph* → generar un token con: `pages_show_list`, `pages_read_engagement`, `read_insights`, `instagram_basic`, `instagram_manage_insights`, `business_management`.
+5. Pegar el token + App ID + App Secret en el `.env`. Claude Code lo cambia por uno que **no vence** (token de página). La app puede quedar en "modo desarrollo": como sos el admin, alcanza.
+
+**E · TikTok (2 min por semana, sin API)**
+- Cada lunes: TikTok Studio en la compu → *Analíticas* → descargar datos de los últimos 7 días de cada canal → tirar los archivos en `reporte-semanal/tiktok/`.
+
+**Al pegar el prompt, agregá:** *"Las claves están en .env y client_secret.json. TikTok sin API: exportación manual en ./tiktok/."*
 
 Abrir Claude Code en una carpeta nueva `reporte-semanal/`.
 
