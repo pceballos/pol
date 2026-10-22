@@ -4,12 +4,12 @@ Estado: ⬜ pendiente · 🟡 en curso · ✅ hecho
 
 | # | Proyecto | Por qué en este orden | Estado |
 |---|----------|----------------------|--------|
-| 1 | Fábrica de ideas y guiones (outliers → análisis → guion verificado) | Ya genera ingresos; es el cuello de botella | 🟡 |
-| 2 | Distribución automática de Bombazo (posts diarios, buscador de cuentas, mail) | Producto ya hecho, falta tráfico | ⬜ |
-| 3 | Coreano en piloto automático (30-60 min/día) | Victoria rápida, poco esfuerzo | ⬜ |
+| 1 | Fábrica de ideas y guiones (outliers → análisis → guion verificado) | Ya genera ingresos; es el cuello de botella | 🟡 primera tanda lista, falta curar |
+| 2 | Distribución automática de Bombazo (posts diarios, buscador de cuentas, mail) | Producto ya hecho, falta tráfico | 🟡 posts automáticos + Grok andando |
+| 3 | Coreano en piloto automático (30-60 min/día) | Victoria rápida, poco esfuerzo | 🟡 app hecha, falta testear |
 | 4 | Grok para tu tía + testear Grok | Cuando tengas el plan | ⬜ |
 | 5 | Juego nuevo estilo Balatro/Megabonk | Lo más grande; mejor con lo aprendido | ⬜ |
-| 6 | Ingreso pasivo automatizado | Elegir idea y validar barato | ⬜ |
+| 6 | Ingreso pasivo automatizado | Elegir idea y validar barato | 🟡 primer short del canal hecho |
 
 ## Notas
 - X: el bot *encuentra* cuentas y redacta mensajes; los DMs los enviás vos (los DMs automáticos violan las reglas de X y arriesgan la cuenta).
@@ -78,3 +78,11 @@ Conceptos: Runas del Oráculo, El Barquero, Urna de Dioses, Último Einherjar, H
 - Río con eventos visibles y bifurcaciones (riesgo/recompensa). Mejoras de la barca. Favor con dioses → pactos. Cada 3 noches, Fenrhos persigue: hay que arrojar almas.
 - Referencias: Luck be a Landlord, Backpack Hero, Slay the Spire (mapa).
 - Próximo paso: prototipos jugables y feos de los dos (navegador) para decidir jugando.
+
+## Próximos pasos (22/10)
+- Coreano: usarla 7 días sin tocar nada; anotar lo que molesta y recién ahí pedir cambios.
+- Fábrica: marcar cada idea ✅/❌ con 1 línea de por qué → que Claude lo guarde en la skill. Después, conectar el rendimiento real de los videos para aprender qué formatos funcionan.
+- Canal: serie "historias + táctica" (narración + momentos de pizarra 3D). Lista de 10 episodios, intro y miniatura con identidad propia, short de cada largo. Publicar 5 antes de pulir más.
+- Bombazo: un código único por cuenta contactada (para medir quién convierte), registro de contactados, bajar a 10 cuentas por día, hacer la medición del login.
+- Grok: radar en tiempo real de Brawl/Clash, monitor de menciones de Bombazo, efemérides de fútbol para el canal, flujo de la tía.
+- Claude: fábrica semanal programada, reporte semanal de métricas con 3 acciones, títulos y miniaturas, "reunión de director" semanal con este roadmap.
